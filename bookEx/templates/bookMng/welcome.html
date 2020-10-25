@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+{% block title %}
+   Home
+{% endblock title%}
+
+
+    {% block sidenav %}
+    
+    {%for item in item_list %}
+
+    <li>
+        <a href="{{item.link}}">{{item.item}}</a>
+    </li>
+
+    {% endfor %}
+
+    {% endblock sidenav %}
+
+    {% block content %}
+    <h1 align="center">Welcome Book Exchange System </h1>
+    {% endblock content %}
+    
+</body>
+</html>

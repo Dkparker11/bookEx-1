@@ -34,4 +34,10 @@
        </tr>
     {% endfor %}
 </table>
+<!-- Added a simple search -->
+<form action="{% url 'searchbar' %}" method="get">
+    <input type="text" name="search"/>
+    <button type="submit">Search</button>
+</form>
+<!-- end of search form -->
 {% endblock content %}
